@@ -1,0 +1,17 @@
+<!-- <p>{{todo.text}}</p> -->
+<div class="todo-item" [ngClass]="{'todo-completed' : todo.completed}">
+
+    <div class="row">
+        <div class="col-8">
+            <input type="checkbox" [checked]="todo.completed" (change)="toggle(todo)" />
+           
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger btn-sm" (click)="delete(todo)">Delete</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-danger btn-sm" (click)="update(todo)">Update</button>
+        </div>
+    </div>
+
+</div>
